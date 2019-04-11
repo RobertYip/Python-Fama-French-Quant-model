@@ -1,9 +1,17 @@
 
 # Fama French 3-Factor Model
 By Robert Yip
+Oct 2018
+Built with Python.
 
-Fama French 3-factor model built from the Mstar CPMS Aggressive and Conservative Canadian strategies.  
-Takes annual snapshots of the portfolios through backtest data, and calculating each factor with the data. Including:  
+In this project, I build a Fama French 3-factor model using two opposite portfolios from Morningstar. The first portfolio is based on an Aggressive strategy and the other a Conservative strategy. The results show the model efficacy based on the strength of the fit.
+
+The project includes these steps:
+1) Retrieval - Sourcing the raw data from CSV files (monthly snapshots of the portfolio). The CSVs are retrieved and exported from SQL. Multiple functions are defining to aid in the retrieval and table transformation.
+2) Transformation - Setup the tables properly to calculate returns and categorize portfolio constituents to factors
+3) Regression model
+
+The Fama French 3-factor model has these attributes. The description explains the proxy that I used.
 **Market Premium** - Calculated from S&P/TSX Composite Index and 90-day Treasury Bills.  
 **SMB** - Categorized each security as small or large market cap by using 30-70 percentiles of aggregate market cap in portfolio.  
 **HML** - Used inverse of P/B as proxy to catergorize and calculate book to market value.  
@@ -31,7 +39,7 @@ start = 2007
 end = 2018
 ```
 
-
+##1) Retrieving the data
 ```python
 def dfAppend(strat, s, e):
     """
@@ -55,7 +63,7 @@ def dfAppend(strat, s, e):
 
     return df
 ```
-
+##2) Transformation
 
 ```python
 def dfResetIndex (df):
@@ -1631,7 +1639,7 @@ FFC
 
 
 
-
+##3) Regression
 ```python
 #Set up regression
 Y = FFA.Return.values 
