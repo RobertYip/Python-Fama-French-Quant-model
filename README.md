@@ -1,7 +1,7 @@
 
 # Fama French 3-Factor Model
-By Robert Yip
-Oct 2018
+By Robert Yip  
+Oct 2018  
 Built with Python.
 
 In this project, I build a Fama French 3-factor model using two opposite portfolios from Morningstar. The first portfolio is based on an Aggressive strategy and the other a Conservative strategy. The results show the model efficacy based on the strength of the fit.
@@ -39,7 +39,7 @@ start = 2007
 end = 2018
 ```
 
-##1) Retrieving the data
+## 1) Retrieving the data
 ```python
 def dfAppend(strat, s, e):
     """
@@ -1639,7 +1639,7 @@ FFC
 
 
 
-##3) Regression
+## 3) Regression
 ```python
 #Set up regression
 Y = FFA.Return.values 
