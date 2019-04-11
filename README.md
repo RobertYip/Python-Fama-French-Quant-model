@@ -1673,14 +1673,6 @@ print(result.summary())
     Kurtosis:                       2.666   Cond. No.                         5.55
     ==============================================================================
     
-    Warnings:
-    [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-    
-
-    C:\Users\Ry\Anaconda3\lib\site-packages\scipy\stats\stats.py:1334: UserWarning: kurtosistest only valid for n>=20 ... continuing anyway, n=11
-      "anyway, n=%i" % int(n))
-    
-
 
 ```python
 #Set up regression
@@ -1728,10 +1720,4 @@ print(result.summary())
     Kurtosis:                       2.247   Cond. No.                         17.0
     ==============================================================================
     
-    Warnings:
-    [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-    
-
-    C:\Users\Ry\Anaconda3\lib\site-packages\scipy\stats\stats.py:1334: UserWarning: kurtosistest only valid for n>=20 ... continuing anyway, n=11
-      "anyway, n=%i" % int(n))
-    
+   
